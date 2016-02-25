@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Assignment 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope,$window) {
+            $scope.alert = function (message) {
+                $window.alert(message);
+            };
+        });
+    </script>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div ng-controller="myCtrl">
+        <button ng-dblclick="alert('You Double Clicked Me!')">Double Click Me</button>
+    </div>
+
+
+</body>
+</html>
